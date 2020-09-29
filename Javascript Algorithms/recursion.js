@@ -47,7 +47,7 @@ function factorial(num){
 }
 //HELPER METHOD recursion
 function outer(input){
-  vat outerScopeVariable = []
+  var outerScopeVariable = []
   function helper(helperInput){
     //modify the outerScopedVariable
     helper(helperInput--)
@@ -55,7 +55,7 @@ function outer(input){
   helper(input)
   return outerScopedVariable;
 }
-//Exampele
+//Example
 function collectOddValues (arr){
   let result =[]
   function helper (helperInput){
