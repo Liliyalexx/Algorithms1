@@ -24,7 +24,18 @@ function mergeSort(arr1, arr2){
 merge ([1,10,50], [2, 14, 99, 100])
 
 
-// MergeSort of one array:
+// MergeSort of a single array:
 function mergeSort(arr){
   if (arr.length <=1) return arr;
-  
+  let mid = Math.floor(arr.length/2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+  return merge(left, right);
+}
+
+mergeSort([10, 24, 76, 73, 72, 1, 9])
+
+time Complexity: O(n log n) Best
+Space Complexity: O(n)
+
+
